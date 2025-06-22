@@ -5,6 +5,7 @@
 // B  : row-major     (K × N)
 // C/D: column-major  (M × N)
 // -----------------------------------------------------------------------------
+//nvcc  -I$CUTLASS_HOME/include -I$CUTLASS_HOME/tools/util/include -arch=sm_75 -std=c++17 -O3 -lcublas bigchungus.cu -o splitk_serial
 #include <cuda_runtime.h>
 #include <cutlass/cutlass.h>
 #include <cutlass/gemm/device/gemm.h>
